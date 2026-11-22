@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Confidentialité · BudJet</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --fond: #fafaf7;
+      --texte: #101110;
+      --secondaire: #555951;
+      --filet: #d9dcd2;
+      --lien: #3a531d;
+      --accent: #def4a2;
+      font: 112.5%/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --fond: #101110; --texte: #fafaf7; --secondaire: #a9aea3; --filet: #353832; --lien: #def4a2; }
+    }
+    body { margin: 0; background: var(--fond); color: var(--texte); overflow-wrap: anywhere; }
+    .coquille { max-width: 66ch; margin-inline: auto; padding: 1.5rem 1.25rem 3.5rem; }
+    header { display: flex; align-items: baseline; flex-wrap: wrap; gap: .35rem 1.5rem; border-bottom: 1px solid var(--filet); padding-bottom: .9rem; }
+    .marque { font-weight: 750; letter-spacing: -.04em; }
+    nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+    nav a { color: var(--secondaire); }
+    main { padding-top: 2.6rem; }
+    h1, h2 { line-height: 1.15; letter-spacing: -.025em; }
+    h1 { font-size: clamp(2rem, 7vw, 3.5rem); margin: .35rem 0 1.1rem; }
+    h2 { font-size: 1.28rem; margin-top: 2.15rem; }
+    p, ul { margin-block: .7rem; }
+    li + li { margin-top: .55rem; }
+    .version { color: var(--secondaire); font-size: .88rem; }
+    a { color: var(--lien); text-underline-offset: .18em; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    strong { font-weight: 680; }
+    ::selection { background: var(--accent); color: #101110; }
+  </style>
+</head>
+<body>
+  <div class="coquille">
+    <header>
+      <span class="marque">BudJet</span>
+      <nav aria-label="Documents BudJet">
+        <a href="confidentialite.html" aria-current="page">Confidentialité</a>
+        <a href="conditions.html">Conditions</a>
+      </nav>
+    </header>
+    <main>
+      <p class="version">BudJet 1.0 pour iPhone · <time datetime="2026-11-22">22 novembre 2026</time></p>
+      <h1>Confidentialité</h1>
+      <p>BudJet est un carnet de finances réservé à un usage personnel. Le carnet est enregistré sur l’iPhone par défaut. Vous choisissez si vous souhaitez le synchroniser avec iCloud ou consulter vos comptes bancaires via votre relais privé. BudJet fonctionne sans compte propre à l’application.</p>
+
+      <section aria-labelledby="iphone">
+        <h2 id="iphone">Sur votre iPhone</h2>
+        <p>Le carnet contient les données que vous saisissez ou choisissez d’importer, notamment les comptes, soldes d’ouverture, écritures, catégories, notes, justificatifs, budgets, échéances, objectifs et valorisations. BudJet s’en sert pour calculer et présenter votre suivi. L’iPhone conserve aussi vos réglages, une version précédente du carnet et, selon vos actions, un point de restauration. La base locale utilise la protection des fichiers iOS. Le verrouillage facultatif de BudJet s’appuie sur l’authentification de l’appareil. BudJet reçoit le résultat de la vérification, sans recevoir vos données biométriques ni votre code.</p>
+        <p>Vous ouvrez les fichiers d’import ou les justificatifs que vous choisissez dans Fichiers. L’analyse des imports se fait sur l’iPhone. Vous choisissez aussi la destination des exports. BudJet propose des exports lisibles et une sauvegarde chiffrée par phrase secrète. Les copies déjà exportées suivent les règles du lieu où vous les avez enregistrées. Les sauvegardes de l’appareil, gérées dans les réglages de l’iPhone, peuvent aussi inclure le dossier local.</p>
+        <p>Si vous autorisez les widgets à afficher des montants, l’extension BudJet lit un résumé local comprenant le budget plaisir, la date et le montant de la prochaine échéance et le montant du patrimoine. Le masquage des montants ou le verrouillage de BudJet désactive ce partage. Les rappels facultatifs sont programmés par iOS sur l’appareil et leur texte est générique.</p>
+      </section>
+
+      <section aria-labelledby="icloud">
+        <h2 id="icloud">Synchronisation iCloud facultative</h2>
+        <p>Lorsque vous activez la synchronisation, BudJet transmet une archive de votre carnet, justificatifs inclus, à une base CloudKit privée liée à votre compte Apple. BudJet conserve sur l’iPhone un identifiant technique fourni par CloudKit et la version de référence du dernier échange pour détecter un changement de compte et rapprocher les versions. La clé de votre relais bancaire reste dans le trousseau local de l’iPhone et ne fait pas partie de l’archive BudJet.</p>
+        <p>Vous pouvez arrêter les échanges ou dissocier le compte dans les réglages BudJet. La copie déjà enregistrée dans iCloud subsiste. Pour la gérer, utilisez le stockage iCloud de votre compte Apple. <a href="https://support.apple.com/fr-fr/108922">Gérer le stockage iCloud</a> · <a href="https://www.apple.com/fr/legal/privacy/fr-ww/">Confidentialité Apple</a></p>
+      </section>
+
+      <section aria-labelledby="banque">
+        <h2 id="banque">Connexion bancaire facultative</h2>
+        <p>Le relais privé échange des données avec Enable Banking, le fournisseur d’accès aux informations de compte. Vous autorisez la lecture des écritures et choisissez si vous souhaitez aussi demander la consultation des soldes. Le parcours d’autorisation s’ouvre dans le navigateur, auprès d’Enable Banking et de votre établissement. Les identifiants et éléments d’authentification renseignés dans ce parcours ne transitent ni par BudJet ni par son relais. Cette autorisation porte sur la lecture et ne permet ni paiement ni virement.</p>
+        <p>Le relais reçoit un code de retour temporaire, puis le remplace par une session de consultation auprès d’Enable Banking. Son fichier privé conserve la référence de la session, sa date d’expiration, l’établissement, l’option de lecture des soldes et les identifiants techniques, noms et devises des comptes accessibles. La clé de signature reste sur l’hôte du relais. BudJet conserve la configuration du relais dans le trousseau de l’iPhone.</p>
+        <p>Lors d’une consultation demandée dans BudJet, le relais traite en mémoire les écritures comptabilisées et, si autorisés, les soldes transmis par le fournisseur. Selon les données disponibles, il peut transmettre les montants, devises, dates, types de soldes, libellés, noms de contrepartie et notes d’écriture. BudJet utilise une référence technique transformée pour repérer les doubles imports. Les soldes consultés servent à la comparaison. Les écritures deviennent des données du carnet après confirmation de votre import.</p>
+        <p>Le relais demande une autorisation de 30 jours au maximum et applique la limite de durée plus courte annoncée par l’établissement. Une nouvelle autorisation est nécessaire pour renouveler l’accès. L’expiration met fin aux lectures et peut laisser les métadonnées de session sur le relais jusqu’à leur retrait. Une révocation aboutie depuis BudJet retire la session du relais. Elle ne supprime pas les écritures déjà importées. <a href="https://auth.enablebanking.com/privacy">Confidentialité du service de connexion Enable Banking</a></p>
+      </section>
+
+      <section aria-labelledby="choix">
+        <h2 id="choix">Consulter, révoquer et effacer</h2>
+        <ul>
+          <li><strong>Exporter votre carnet.</strong> Ouvrez Réglages → Importer ou exporter.</li>
+          <li><strong>Arrêter les lectures.</strong> Ouvrez Réglages → Connexions bancaires et révoquez l’accès concerné. Vous pouvez aussi gérer le consentement auprès d’Enable Banking et, si votre banque le permet, dans son espace. Une révocation effectuée chez le fournisseur peut laisser une entrée expirée dans BudJet, à retirer depuis Connexions bancaires. <a href="https://enablebanking.com/data-sharing-consents/">Gérer les consentements Enable Banking</a></li>
+          <li><strong>Effacer le carnet de l’iPhone.</strong> Dans Réglages, choisissez « Effacer le dossier de cet iPhone ». Cette action efface le carnet local et ses points de restauration, et dissocie iCloud. Pour les autres copies, gérez séparément les exports et sauvegardes, la copie iCloud et chaque consentement bancaire.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="site">
+        <h2 id="site">Publicité et statistiques</h2>
+        <p>BudJet n’intègre ni publicité, ni suivi publicitaire, ni outil de mesure d’audience. Ces pages d’information ne chargent aucun script, ne déposent aucun cookie et ne proposent aucun formulaire. L’hébergement du site et du relais peut traiter les métadonnées techniques nécessaires à la connexion.</p>
+      </section>
+
+      <section aria-labelledby="contact">
+        <h2 id="contact">Questions sur vos données</h2>
+        <p>Pour vos questions et demandes relatives à vos données dans BudJet, écrivez au <a href="mailto:yt.viperzz@gmail.com">contact de protection des données</a>.</p>
+        <p>Pour joindre la personne qui exploite votre relais au sujet d’une connexion bancaire, utilisez le contact de protection des données indiqué pour BudJet dans le parcours Enable Banking ou dans la gestion de vos consentements. Pour les données traitées par Apple, votre banque ou Enable Banking, ces services proposent leurs propres canaux. <a href="https://enablebanking.com/data-sharing-consents/">Gérer les consentements Enable Banking</a> · <a href="https://privacy.apple.com/">Données et confidentialité Apple</a></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
